@@ -21,4 +21,6 @@ jobs:
         run: cd java-app; ./mvnw clean install
       - name: upload the artifact2
         run: cd java-app; ./mvnw deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
