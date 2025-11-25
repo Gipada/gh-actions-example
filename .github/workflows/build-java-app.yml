@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: do everything
+      - name: do quality checks
         uses: ./.github/actions/code-quality-java
         with:
           working-directory: java-app
