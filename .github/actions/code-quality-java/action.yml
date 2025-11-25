@@ -11,10 +11,10 @@ runs:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '21'
     - name: checkstyle with maven
-      run: cd java-app; ./mvnw checkstyle:checkstyle
+      run: ./mvnw checkstyle:checkstyle
       shell: bash
     - name: checkstyle with maven
-      run: cd java-app; ./mvnw test
+      run: ./mvnw test
       shell: bash
     - run: mkdir quality && cp -R target/reports/* quality && cp target/surefire-reports/* quality
       shell: bash
