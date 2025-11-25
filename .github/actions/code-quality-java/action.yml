@@ -13,3 +13,13 @@ runs:
     - name: checkstyle with maven
       run: cd java-app; ./mvnw checkstyle:checkstyle
       shell: bash
+    - name: checkstyle with maven
+      run: cd java-app; ./mvnw test
+      shell: bash
+    - run: mkdir quality && cp -R target/reports/* quality && cp target/surefire-reports/* quality
+      shell: bash
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Quality package
+        path: java-app/quality
+
