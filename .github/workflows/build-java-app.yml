@@ -16,7 +16,7 @@ jobs:
           java-version: '21'
       - name: run maven command to build the app
         run: cd java-app; ./mvnw clean install
-      - name: upload the artifact
+      - name: upload the artifact2
         uses: actions/upload-artifact@v4
         with:
           name: my-artifact
