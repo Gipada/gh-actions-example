@@ -15,8 +15,8 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '21'
       - name: run maven command to build the app
-        run: java-app/mvnw clean install
-      - name: upload the artifact2
+        run: cd java-app; mvnw clean install
+      - name: upload the artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-artifact
