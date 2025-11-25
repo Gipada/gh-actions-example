@@ -10,6 +10,8 @@ jobs:
       deployments: write
       packages: write
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: do everything
         uses: ./.github/actions/code-quality-java
       - name: run maven command to build the app
