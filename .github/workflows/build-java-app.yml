@@ -17,7 +17,5 @@ jobs:
       - name: run maven command to build the app
         run: cd java-app; ./mvnw clean install
       - name: upload the artifact2
-        uses: actions/upload-artifact@v4
-        with:
-          name: my-artifact
-          path: java-app/target/demo-0.0.1-SNAPSHOT.jar
+        run: cd java-app; ./mvnw deploy
+
