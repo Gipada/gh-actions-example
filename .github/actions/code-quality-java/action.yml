@@ -29,5 +29,4 @@ runs:
       with:
         name: Quality package
         path: java-app/quality
-      working-directory: ${{ inputs.working-directory }}
 
